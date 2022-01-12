@@ -140,3 +140,39 @@ Content-Length
 - Authorization: 클라이언트 인증 정보를 서버에 전달
 - WWW-Authenticate : 리소스 접근시 필요한 인증 방법 정의
 
+
+
+
+쿠키
+
+- Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)
+- Cookie: 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달
+
+
+
+Stateless
+
+- HTTP는 무상태(Stateless) 프로토콜이다.
+- 클라이어트와 서버가 요청과 응답을 주고 받으면 연결이 끊어진다.
+
+
+
+쿠키 - 도메인
+
+쿠키 - 경로
+
+쿠키 - 보안
+
+Secure, HttpOnly, SameSite
+
+- Secure
+  - 쿠키는 http, https를 구분하지 않고 전송
+  - Secure를 적용하면 https인 경우에만 전송
+- HttpOnly
+  - XSS 공격 방지
+  - 자바스크립트에서 접근 불가(document.cookie)
+  - HTTP 전송에만 사용
+- SameSite
+  - XSRF 공격 방지
+  - 요청 도메인과 쿠키에 설정된 도메인이 같은 경우만 쿠키 전송
+
